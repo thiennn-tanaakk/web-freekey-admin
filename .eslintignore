@@ -1,0 +1,2 @@
+mock_api/**/*.js
+*.d.ts

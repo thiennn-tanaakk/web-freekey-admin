@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import NonAuth from "@/components/templates/NonAuth.vue";
-import Loading from "@/components/atoms/Loading.vue";
+import Loading from "@/components/atoms/LoadingPage.vue";
 import { useForm } from "vee-validate";
 import { ref } from "vue";
 

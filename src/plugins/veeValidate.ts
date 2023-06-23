@@ -1,5 +1,4 @@
 import { INPUT_FORMAT } from "@/utils/inputFormats";
-import get from "lodash.get";
 import { configure, defineRule } from "vee-validate";
 import { localize } from "@vee-validate/i18n";
 import ja from "@vee-validate/i18n/dist/locale/ja.json";
