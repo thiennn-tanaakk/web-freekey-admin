@@ -15,6 +15,7 @@ import AppVue from "./App.vue";
 // Plugins
 import "@/plugins/veeValidate";
 import "@/plugins/vuetify";
+import "@/plugins/amplify";
 
 const vuetify = createVuetify({
   components,

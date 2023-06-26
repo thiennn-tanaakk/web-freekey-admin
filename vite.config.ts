@@ -8,8 +8,16 @@ import eslintPlugin from "vite-plugin-eslint";
 export default defineConfig({
   plugins: [vue(), eslintPlugin()],
   resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
+    alias: [
+      {
+        // "@": fileURLToPath(new URL("./src", import.meta.url)),
+        find: "@",
+        replacement: fileURLToPath(new URL("./src", import.meta.url)),
+      },
+      {
+        find: "./runtimeConfig",
+        replacement: "./runtimeConfig.browser",
+      },
+    ],
   },
 });
