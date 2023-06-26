@@ -10,12 +10,12 @@ const NotFound = () => import("@/pages/_404.vue");
 
 const Login = () => import("@/pages/login.vue");
 
-export enum RouteName {
-  "LOGIN" = "LOGIN",
-  "HOME" = "HOME",
-  "ABOUT" = "ABOUT",
-  "NOT_FOUND" = "NOT_FOUND",
-}
+export const RouteName = {
+  LOGIN: "LOGIN",
+  HOME: "HOME",
+  ABOUT: "ABOUT",
+  NOT_FOUND: "NOT_FOUND",
+};
 
 // 2. Define some routes
 // Each route should map to a component.
