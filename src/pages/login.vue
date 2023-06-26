@@ -34,6 +34,9 @@ import NonAuth from "@/components/templates/NonAuth.vue";
 import Loading from "@/components/atoms/LoadingPage.vue";
 import { useForm } from "vee-validate";
 import { ref } from "vue";
+import { useAlertsStore } from "@/store/alerts";
+
+const store = useAlertsStore();
 
 // vee-validate
 const { defineComponentBinds, handleSubmit, isValidating, isSubmitting } =
@@ -59,7 +62,10 @@ const password = defineComponentBinds("password", vuetifyConfig);
 const loading = ref(false);
 
 // methods
-const onSubmit = handleSubmit((values) => {
-  console.log("Submitted with", values);
-});
+const onSubmit = (e: any) => {
+  e.preventDefault();
+  handleSubmit((values) => {
+    console.log("Submitted with", values);
+  })();
+};
 </script>

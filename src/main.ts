@@ -11,6 +11,7 @@ import { ja } from "vuetify/locale";
 
 import router from "./routes";
 import AppVue from "./App.vue";
+import pinia from "./plugins/pinia";
 
 // Plugins
 import "@/plugins/veeValidate";
@@ -29,4 +30,4 @@ const vuetify = createVuetify({
 
 const app = createApp(AppVue);
 
-app.use(router).use(vuetify).mount("#app");
+app.use(router).use(pinia).use(vuetify).mount("#app");
