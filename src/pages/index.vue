@@ -1,11 +1,13 @@
 <template>
   <Auth>
-    <template #main> Home </template>
+    <template #main> {{ user?.username }} </template>
   </Auth>
 </template>
 
 <script lang="ts">
 import Auth from "@/components/templates/Auth.vue";
+import { useRootStore } from "@/store/root";
+import { storeToRefs } from "pinia";
 
 export default {
   name: "App",
@@ -14,7 +16,11 @@ export default {
   },
   // state
   data() {
-    return {};
+    const rootStore = useRootStore();
+    const { user } = storeToRefs(rootStore);
+    return {
+      user,
+    };
   },
   methods: {},
 };

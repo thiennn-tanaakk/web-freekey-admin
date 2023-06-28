@@ -17,6 +17,13 @@
             value="about"
             @click="navigateTo('/about')"
           />
+          <v-list-item
+            class="mt-auto h-100"
+            prepend-icon="mdi-logout"
+            title="Logout"
+            value="logout"
+            @click="logout"
+          />
         </v-list>
       </v-navigation-drawer>
       <v-main>
@@ -27,6 +34,12 @@
 </template>
 
 <script lang="ts">
+import { Auth } from "aws-amplify";
+import { useRootStore } from "@/store/root";
+import router, { RouteName } from "@/routes";
+
+const rootStore = useRootStore();
+
 export default {
   name: "Auth",
   // state
@@ -36,6 +49,14 @@ export default {
   methods: {
     navigateTo(path: string) {
       this.$router.push(path);
+    },
+    async logout() {
+      rootStore.setLoading(true);
+      await Auth.signOut();
+      rootStore.$reset();
+      rootStore.showSuccess("Logged out");
+      rootStore.setLoading(false);
+      router.push({ name: RouteName.LOGIN });
     },
   },
 };

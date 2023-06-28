@@ -26,19 +26,19 @@
 </template>
 
 <script lang="ts">
-import { useAlertsStore } from "@/store/alerts";
+import { useRootStore } from "@/store/root";
 import { storeToRefs } from "pinia";
 
 export default {
   name: "TheSnackbar",
   setup() {
-    const store = useAlertsStore();
+    const store = useRootStore();
     return {
       store,
     };
   },
   data() {
-    const store = useAlertsStore();
+    const store = useRootStore();
     const { messages } = storeToRefs(store);
 
     return {
@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     noticeClose(id: number) {
-      const store = useAlertsStore();
+      const store = useRootStore();
       store.removeMessage(id);
     },
   },

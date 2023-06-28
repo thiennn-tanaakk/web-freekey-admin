@@ -4542,6 +4542,18 @@ q@^1.5.1:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==
 
+qrcode-generator@^1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/qrcode-generator/-/qrcode-generator-1.4.4.tgz#63f771224854759329a99048806a53ed278740e7"
+  integrity sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==
+
+qrcode-vue3@^1.5.40:
+  version "1.5.40"
+  resolved "https://registry.yarnpkg.com/qrcode-vue3/-/qrcode-vue3-1.5.40.tgz#dca5012a397e8d3fe01d6d6a6e4630640fc87e0d"
+  integrity sha512-quy3SV+WT5uRFuscoBjYQxYmVvfj7dPQ+zvRbmnaQ/Kn2zmcFpFbHggckD6PDCAKGLZkrphUlmsrUOsnDGaCAg==
+  dependencies:
+    qrcode-generator "^1.4.4"
+
 qs@^6.11.0:
   version "6.11.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.2.tgz#64bea51f12c1f5da1bc01496f48ffcff7c69d7d9"

@@ -1,4 +1,4 @@
-import { Amplify } from "aws-amplify";
+import { Amplify, I18n } from "aws-amplify";
 
 const COOKIESTORAGE_SECURE =
   import.meta.env.VITE_COOKIESTORAGE_SECURE === "true";
@@ -65,3 +65,5 @@ Amplify.configure({
     */
   },
 });
+
+I18n.setLanguage("ja");

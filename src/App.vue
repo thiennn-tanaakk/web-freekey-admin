@@ -1,12 +1,18 @@
 <template>
-  <the-snackbar />
+  <TheSnackbar />
+  <LoadingPage />
   <router-view />
 </template>
 
 <script lang="ts">
-import TheSnackbar from "./components/atoms/TheSnackbar.vue";
+import TheSnackbar from "@/components/atoms/TheSnackbar.vue";
+import LoadingPage from "@/components/atoms/LoadingPage.vue";
+
 export default {
   name: "App",
-  components: { TheSnackbar },
+  components: {
+    TheSnackbar,
+    LoadingPage,
+  },
 };
 </script>

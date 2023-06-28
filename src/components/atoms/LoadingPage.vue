@@ -1,21 +1,20 @@
 <template>
-  <v-overlay v-model="overlay" class="d-flex align-center justify-center">
+  <v-overlay v-model="loading" class="d-flex align-center justify-center">
     <v-progress-circular indeterminate size="64" />
   </v-overlay>
 </template>
 
 <script lang="ts">
+import { useRootStore } from "@/store/root";
+import { storeToRefs } from "pinia";
+
 export default {
   name: "LoadingPage",
-  props: {
-    show: {
-      type: Boolean,
-      required: true,
-    },
-  },
   data() {
+    const rootStore = useRootStore();
+    const { loading } = storeToRefs(rootStore);
     return {
-      overlay: this.show,
+      loading,
     };
   },
 };

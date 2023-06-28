@@ -19,6 +19,7 @@
     "aws-amplify": "^5.3.1",
     "dayjs": "^1.11.8",
     "pinia": "^2.1.4",
+    "qrcode-vue3": "^1.5.40",
     "sass": "^1.63.2",
     "vee-validate": "^4.9.6",
     "vue": "^3.2.47",
