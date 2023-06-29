@@ -1,6 +1,15 @@
 <template>
   <Auth>
-    <template #main> {{ user?.username }} </template>
+    <template #main>
+      <div
+        class="px-4 py-4"
+        :style="{
+          marginTop: '50px',
+        }"
+      >
+        {{ user?.username }}
+      </div>
+    </template>
   </Auth>
 </template>
 

@@ -1,8 +1,10 @@
 import { ThemeDefinition, createVuetify } from "vuetify";
 import { ja } from "vuetify/locale";
 
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+
 const myCustomLightTheme: ThemeDefinition = {
-  dark: false,
   colors: {
     primary_600: "#0041A3",
     primary_500: "#0856CC",
@@ -36,6 +38,8 @@ const myCustomLightTheme: ThemeDefinition = {
 };
 
 export default createVuetify({
+  components,
+  directives,
   locale: {
     locale: "ja",
     fallback: "ja",
@@ -44,6 +48,7 @@ export default createVuetify({
     },
   },
   theme: {
+    defaultTheme: "light",
     themes: {
       light: myCustomLightTheme,
     },
